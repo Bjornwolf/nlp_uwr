@@ -4,7 +4,7 @@ import pickle
 
 def get_2():
     if not (os.path.isfile("dict_2.pkl") and os.path.isfile("totals_2.pkl")):
-        file_2 = open('2grams', 'r')
+        file_2 = open('../data/2grams', 'r')
         dict_2 = {}
         totals_2 = {}
         for line in file_2:
@@ -25,7 +25,7 @@ def get_2():
 
 def get_3():
     if not (os.path.isfile("dict_3.pkl") and os.path.isfile("totals_3.pkl")):
-        file_3 = open('3grams', 'r')
+        file_3 = open('../data/3grams', 'r')
         dict_3 = {}
         totals_3 = {}
         for line in file_3:
