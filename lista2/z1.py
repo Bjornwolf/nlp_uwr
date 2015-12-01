@@ -108,7 +108,7 @@ def dynamic_depolonised(sentence, depolon_dict, corrector):
             for (prefix, nll) in prefices:
                 new_prefix = prefix + [option]
                 ll = count_log_likelihood(prefix[-1], option, depolon_dict, wc)
-                new_prefices_cands.append( (new_prefix, nll - ll) )
+                new_prefices_cands.append(new_prefix, nll - ll)
             best_nll = new_prefices_cands[0][1]
             best_prefix = new_prefices_cands[0][0]
             for (prefix, nll) in new_prefices_cands:
