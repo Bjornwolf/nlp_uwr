@@ -1,0 +1,110 @@
+['subst:sg:nom:n2', 'idzie do', 'subst:sg:gen:m1', 'z', 'adj:sg:inst:n2:pos', 'subst:sg:inst:n2']
+UNIGRAM:  do idzie do kaczyńskiego z przewodniczącym moim
+BIGRAM:  do idzie do burdy z przysłowiowym oczkiem
+UNIGRAM:  to idzie do marszałka z państwowym jednym
+BIGRAM:  wczoraj idzie do crusoe z wąskim gronem
+UNIGRAM:  nic idzie do rzecznika z sześciomiesięcznym do
+BIGRAM:  to idzie do modiglianiego z ustawowym prawem
+UNIGRAM:  zainteresowanie idzie do posła z śledczym ue
+BIGRAM:  zaproszenie idzie do żagarysty z głębokim przekonaniem
+UNIGRAM:  do idzie do pośrednika z polskim do
+BIGRAM:  ubezpieczenie idzie do bossa z jakimś cudem
+['subst:sg:nom:f', 'z', 'subst:sg:inst:m2', 'je', 'subst:sg:acc:m1']
+UNIGRAM:  naiwność z karmazynem je króla
+BIGRAM:  manipulacja z klientem je arcybiskupa
+UNIGRAM:  droga z drugim je kogoś
+BIGRAM:  mowa z lwem je zdzisława
+UNIGRAM:  swoboda z duchem je dorosłego
+BIGRAM:  druga z duchem je marysia
+UNIGRAM:  kurwa z jednym je mojego
+BIGRAM:  natura z gigantem je marysia
+UNIGRAM:  pani z gofrem je mojego
+BIGRAM:  zgoda z psem je ubezpieczyciela
+['adj:sg:nom:m1:pos', 'subst:sg:nom:m1', 'na', 'subst:sg:loc:f', 'opowiada o', 'subst:sg:loc:m1']
+UNIGRAM:  były fischer na trudności opowiada o świętym
+BIGRAM:  następny żołnierz na twarzy opowiada o giedroyciu
+UNIGRAM:  były chory na własności opowiada o panu
+BIGRAM:  nasz młody na giełdzie opowiada o zwrotniczym
+UNIGRAM:  wysoki maciek na osobowości opowiada o jahwe
+BIGRAM:  jedyny członek na łotwie opowiada o murawskim
+UNIGRAM:  ów pan na skórze opowiada o pogromcy
+BIGRAM:  właściwy kandydat na straży opowiada o ekslicealiście
+UNIGRAM:  który ktoś na bezsilności opowiada o sprawcy
+BIGRAM:  gorący patriota na twarzy opowiada o stażyście
+['adj:sg:nom:n1:pos', 'adj:sg:nom:n1:pos', 'subst:sg:nom:n1', 'opowiada o', 'subst:sg:loc:f', 'w', 'adj:sg:loc:m2:pos', 'subst:sg:loc:m2']
+UNIGRAM:  to dobre dziecko opowiada o rei w zwykłym dole
+BIGRAM:  jakie skomplikowane imię opowiada o wyczerpywalności w takim duchu
+UNIGRAM:  które to imię opowiada o odpowiedzialności w takim ile
+BIGRAM:  odmienne muzyczne prosię opowiada o dymensji w narodowym pechu
+UNIGRAM:  ostatnie rutynowe dziecko opowiada o gazecie w moim karcie
+BIGRAM:  które które dziecko opowiada o niepraworządności w alpejskim gąsiorze
+UNIGRAM:  swoje jedno dziecko opowiada o straży w dochodowym jednym
+BIGRAM:  krzywdzące śliczne imię opowiada o eksterioryzacji w przyszłym sekretarzu
+UNIGRAM:  to pełne dziecko opowiada o świadomości w takim ludzie
+BIGRAM:  niebieskie celofanowe pacholę opowiada o przeciwskuteczności w jakim duchu
+['subst:sg:nom:f', 'w', 'subst:sg:loc:n2', 'opowiada o', 'adj:sg:loc:m2:pos', 'subst:sg:loc:m2', 'z', 'subst:sg:inst:n1']
+UNIGRAM:  inicjacja w in opowiada o książęcym drugim z bydlęciem
+BIGRAM:  mirosława w biurze opowiada o listopadowym trzeciaku z dzieckiem
+UNIGRAM:  porada w do opowiada o jakim pionie z okiem
+BIGRAM:  władysława w czym opowiada o owalnicowym koźle z dzieckiem
+UNIGRAM:  wieżyca w do opowiada o długim ludzie z uchem
+BIGRAM:  agencja w życiu opowiada o narastającym leku z niemałym
+UNIGRAM:  mentalność w do opowiada o żonatym jednym z okiem
+BIGRAM:  września w dwudziestoleciu opowiada o anestetycznym gawocie z dzieckiem
+UNIGRAM:  była w do opowiada o tym ile z małym
+BIGRAM:  kilka w ministerstwie opowiada o stukilowym husky z dzieckiem
+['adj:sg:nom:f:pos', 'subst:sg:nom:f', 'w', 'subst:sg:loc:f', 'idzie do', 'subst:sg:gen:n1', 'w', 'adj:sg:loc:m2:pos', 'subst:sg:loc:m2']
+UNIGRAM:  ma wojna w rzeczy idzie do oka w naszym znajdzie
+BIGRAM:  była pierwsza w ziemi idzie do bydlęcia w którym renault
+UNIGRAM:  ma literówka w sferze idzie do imienia w tym sekretarzu
+BIGRAM:  kwalifikacyjna “bitwa w galerii idzie do bydlęcia w dużym pechu
+UNIGRAM:  była odpowiedzialność w działalności idzie do dziecięcia w pewnym macie
+BIGRAM:  prowadzona korespondencja w kategorii idzie do orlęcia w takim notebooku
+UNIGRAM:  wyniosła władysława w tajemnicy idzie do dziecka w wyjątkowym jednym
+BIGRAM:  można sprzedaż w sesji idzie do dziecięcia w którym amerykanie
+UNIGRAM:  europejska firma w ulicy idzie do małego w tym kangurku
+BIGRAM:  ma pani w kombinacji idzie do czternastooka w powstałym merkurym
+['subst:sg:nom:n2', 'w', 'adj:sg:loc:f:pos', 'subst:sg:loc:f', 'je', 'adj:sg:acc:m1:pos', 'subst:sg:acc:m1']
+UNIGRAM:  go w jeleniej fundacji je zbawiennego kamila
+BIGRAM:  to w tej sztuce je surowego funkcjonariusza
+UNIGRAM:  to w hotelarskiej definicji je nowego człowieka
+BIGRAM:  do w pewnej nocy je właściwego naczelnika
+UNIGRAM:  do w stołecznej informacji je słynnego obecnego
+BIGRAM:  do w całej sprawie je dawnego nauczyciela
+UNIGRAM:  do w ułożonej odpowiedzi je przypadkowego nowickiego
+BIGRAM:  do w każdej chwili je należytego rushdiego
+UNIGRAM:  życie w specjalnej ekipie je wysokiego psychola
+BIGRAM:  ofe w początkowej fazie je idealistycznego wspomożyciela
+['subst:sg:nom:m3', 'z', 'adj:sg:inst:m3:pos', 'subst:sg:inst:m3', 'idzie do', 'adj:sg:gen:n1:pos', 'subst:sg:gen:n1', 'w', 'subst:sg:loc:f']
+UNIGRAM:  kierunek z tym miałem idzie do starego dziecka w oskarżonej
+BIGRAM:  pierwszy z ubezpieczeniowym funduszem idzie do cudnego niezwierzęcia w irenie
+UNIGRAM:  niż z sobolowym miałem idzie do kurowskiego imienia w zawartości
+BIGRAM:  tydzień z podobnym apelem idzie do szatynowego jagnięcia w sieci
+UNIGRAM:  problem z poprzednim kp idzie do oskarżonego imienia w niemożliwości
+BIGRAM:  marek z powiatowym bankiem idzie do dożywotniego czternastooka w końcówce
+UNIGRAM:  rok z centralnym światem idzie do tego dziecka w możliwości
+BIGRAM:  pas z którym potem idzie do przegazowanego jagnięcia w polsce
+UNIGRAM:  członek z wysokim km idzie do samochodowego dziecka w własności
+BIGRAM:  aids z takim przeglądem idzie do wyciszającego oka“ w wysokości
+['subst:sg:nom:n2', 'z', 'adj:sg:inst:m2:pos', 'subst:sg:inst:m2', 'je', 'subst:sg:acc:m3', 'w', 'adj:sg:loc:m2:pos', 'subst:sg:loc:m2']
+UNIGRAM:  co z kolejnym wolnym je pkt w zawodowym wnętrze
+BIGRAM:  co z gorącym paluchem je bez w którym amerykanie
+UNIGRAM:  to z tym jednym je termin w publicznym ludzie
+BIGRAM:  de z czystym persem je raz w prywatnym suzuki
+UNIGRAM:  co z dobrym volkswagenem je trzon w wszystkim pierwszym
+BIGRAM:  samobójstwo z jakubowym żółwiem“ je ląd w danym szczurze
+UNIGRAM:  używanie z moim pierwszym je nadmiar w swoim karnym
+BIGRAM:  dziś z samym duchem je zarząd w generalnym renault
+UNIGRAM:  go z moralnym trzecim je sld w twoim ile
+BIGRAM:  to z tekturowym kozłem je termin w każdym wolnym
+['subst:sg:nom:f', 'w', 'subst:sg:loc:n2', 'idzie do', 'subst:sg:gen:n2', 'w', 'subst:sg:loc:n2']
+UNIGRAM:  głębokość w do idzie do pierwszego w mi
+BIGRAM:  większość w państwie idzie do półpaństwa w życiu
+UNIGRAM:  pani w osiedlu idzie do do w tym
+BIGRAM:  podróż w towarzystwie idzie do zarządzenia w pobliżu
+UNIGRAM:  chrl w do idzie do małżeństwa w dziale
+BIGRAM:  cholera w studium idzie do nalo w jednym
+UNIGRAM:  pani w wieku idzie do lata w do
+BIGRAM:  spółka w towarzystwie idzie do pogłownego w jednym
+UNIGRAM:  świadomość w jednym idzie do wsparcia w do
+BIGRAM:  praca w referendum idzie do skupienia w odniesieniu
