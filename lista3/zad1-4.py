@@ -44,34 +44,63 @@ def flatten_sentence(sentence):
 
 def produce(symbol):
     gender = ["m1", "m2", "m3", "f", "n1", "n2"]
+    nums = ["sg", "pl"]
     if symbol.is_terminal:
         return [symbol]
     if symbol.name == "Z":
-        return [Symbol("GR", case="nom", number="sg", 
-                       gender=random.choice(gender)),
-                Symbol("GC", number="sg")]
+        p = np.random.uniform(0, 1)
+        if p < 0.5:
+            return [Symbol("GR", case="nom", number="sg", 
+                           gender=random.choice(gender)),
+                    Symbol("GC", number="sg")]
+        else:
+            with open('../data/trans_form', 'r') as tf:
+                lines = tf.readlines()
+            chosen = random.choice(lines)[:-1].split(' ')
+            word = chosen[0]
+            tag = chosen[1]
+            if "sg" in tag:
+                number = "sg"
+            else:
+                number = "pl"
+            my_gender = tag.split(':')[-2]
+
+            res = [Symbol("GR", case="nom", number=number, 
+                          gender=my_gender),
+                   Symbol(None, is_terminal=True, content=word)]
+            p = np.random.uniform(0, 1)
+            if p < 0.5:
+                res += [Symbol("GR", case="dat", number=random.choice(nums),
+                               gender=random.choice(gender))]
+
+            p = np.random.uniform(0, 1)
+            if p < 0.5:
+                res += [Symbol("GR", case="acc", number=random.choice(nums), 
+                               gender=random.choice(gender))]
+            return res
+
     elif symbol.name == "GC":
         p = np.random.uniform(0, 1)
 
         if p < 0.2:
             return [Symbol(None, is_terminal=True, content="opowiada o"),
-                    Symbol("GR", case="loc", number="sg",
+                    Symbol("GR", case="loc", number=random.choice(nums),
                            gender=random.choice(gender))]
         if p < 0.4:
             return [Symbol(None, is_terminal=True, content="pracuje z"),
-                    Symbol("GR", case="inst", number="sg", 
+                    Symbol("GR", case="inst", number=random.choice(nums), 
                            gender=random.choice(gender))]
         if p < 0.6:
             return [Symbol(None, is_terminal=True, content="je"),
-                    Symbol("GR", case="acc", number="sg", 
+                    Symbol("GR", case="acc", number=random.choice(nums), 
                            gender=random.choice(gender))]
         if p < 0.8:
             return [Symbol(None, is_terminal=True, content="idzie do"),
-                    Symbol("GR", case="gen", number="sg",
+                    Symbol("GR", case="gen", number=random.choice(nums),
                            gender=random.choice(gender))]
         else:
             return [Symbol(None, is_terminal=True, content="lubi"),
-                    Symbol("GR", case="acc", number="sg",
+                    Symbol("GR", case="acc", number=random.choice(nums),
                            gender=random.choice(gender))]
     elif symbol.name == "GR":
         p = np.random.uniform(0, 1)
@@ -163,7 +192,8 @@ def build_unigram(sentence, tags_to_words, unigrams):
             result.append(word)
     return result
 
-def build_bigram(sentence, tags_to_words, unigrams, bigrams, words_to_tags):
+def build_bigram(sentence, tags_to_words, unigrams, bigrams, words_to_tags,
+                 skipgrams):
     so_far = []
     tag_word = sentence[0]
     if ':' in tag_word:
@@ -175,9 +205,18 @@ def build_bigram(sentence, tags_to_words, unigrams, bigrams, words_to_tags):
         so_far = [tag_word]
 
     for tag_word in sentence[1:]:
+        second_last_word = None
         last_word = so_far[-1]
-        try:
+        try: 
             acceptables = bigrams[last_word]
+            if len(so_far) > 2:
+                second_last_word = so_far[-2]
+                if second_last_word in skipgrams:
+                    new_acceptables = {}
+                    for word in acceptables:
+                        if word in skipgrams[second_last_word]:
+                            new_acceptables[word] = acceptables[word]
+                    acceptables = new_acceptables
         except KeyError:
             acceptables = {}
         if ':' in tag_word:
@@ -235,6 +274,23 @@ def read_2grams(bigram_handle):
             dictionary[word1] = {word2: number}
     return dictionary
 
+def read_skipgrams(skipgram_handle):
+    dictionary = {}
+    for line in skipgram_handle:
+        line = line[:-1].split(' ')
+        number = float(line[0])
+        w1 = line[1]
+        w2 = line[2]
+        if number > 20.:
+            if w1 in dictionary:
+                dictionary[w1].append(w2)
+            else:
+                dictionary[w1] = [w2]
+    return dictionary
+
+
+
+
 
 with codecs.open('../data/1grams', 'r') as unig:
     unigrams = read_1grams(unig)
@@ -245,6 +301,8 @@ with codecs.open('../data/2grams_zepsute', 'r') as big:
 with codecs.open('../data/morfeuszNKJP.txt', 'r') as morf:
     tags_to_words, words_to_tags = read_morfeusz_nkjp(morf)
 
+with codecs.open('../data/skipgramy', 'r') as skip:
+    skipgrams = read_skipgrams(skip)
 
 sentences = [produce_sentence() for _ in range(10)]
 for tags in sentences:
@@ -253,7 +311,7 @@ for tags in sentences:
         unigres = build_unigram(tags, tags_to_words, unigrams)
         print 'UNIGRAM: ', ' '.join(unigres)
 
-        bigres = build_bigram(tags, tags_to_words, unigrams, bigrams, words_to_tags)
+        bigres = build_bigram(tags, tags_to_words, unigrams, bigrams, words_to_tags, skipgrams)
         print 'BIGRAM: ', ' '.join(bigres)
 
 
